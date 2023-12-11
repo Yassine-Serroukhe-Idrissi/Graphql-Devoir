@@ -1,4 +1,4 @@
-package ma.heracles.inventoryservice.entities;
+package ma.heracles.inventoryservice.dao.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -7,8 +7,7 @@ import java.util.List;
 
 
 @Entity @Data @Builder
-@NoArgsConstructor @AllArgsConstructor
-@Table
+@NoArgsConstructor @AllArgsConstructor @ToString
 public class Creator {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

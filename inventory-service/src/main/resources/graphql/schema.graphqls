@@ -1,12 +1,5 @@
-type Query {
-    videoList : [Video]
-    creatorsList : [Creator]
-    creatorById(id :Float) : Creator
-    videoById(id :Float) : Video
-
-}
 type Video {
-    id : Float,
+    id: Float,
     name : String,
     url : String,
     description : String,
@@ -14,25 +7,31 @@ type Video {
     creator : Creator
 }
 type Creator {
-    id : Float,
+    id: Float
     name : String,
     email : String
 }
-
-type Mutation{
-    addVideo(video: VideoRequest): Video
-    addCreator(creator : CreatorRequest): Creator
-}
-
-input VideoRequest{
+input VideoDTO{
     name : String,
     url : String,
     description : String,
-    datePublication : String,
-    creator : CreatorRequest
+    creator : CreatorDTO
 }
 
-input CreatorRequest{
+input CreatorDTO{
     name : String,
     email : String,
 }
+type Query {
+    videoList : [Video]
+    creatorsList : [Creator]
+    creatorById(Id :Float) : Creator
+    videoById(Id :Float) : Video
+
+}
+
+type Mutation{
+    addVideo(videoDTO: VideoDTO): Video
+    addCreator(creatorDTO : CreatorDTO): Creator
+}
+

@@ -2,8 +2,8 @@ package ma.heracles.inventoryservice.mappers;
 
 import ma.heracles.inventoryservice.dtos.CreatorDTO;
 import ma.heracles.inventoryservice.dtos.VideoDTO;
-import ma.heracles.inventoryservice.entities.Creator;
-import ma.heracles.inventoryservice.entities.Video;
+import ma.heracles.inventoryservice.dao.entities.Creator;
+import ma.heracles.inventoryservice.dao.entities.Video;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
