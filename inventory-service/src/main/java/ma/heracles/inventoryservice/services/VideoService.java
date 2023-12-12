@@ -27,11 +27,8 @@ public class VideoService {
     public List<Video> videoList(){
         return videoRepository.findAll();
     }
-    public Video addVideo(VideoDTO videoDTO){
-        CreatorDTO creatorDTO = videoDTO.getCreatorDTO();
-        Creator creator = Mapper.fromCreatorDto(creatorDTO);
-        Video video = Mapper.fromVideoDto(videoDTO);
-        video.setCreator(creator);
+    public Video addVideo(Video video) {
+        creatorRepository.save(video.getCreator());
         return videoRepository.save(video);
     }
     public Video findById(Long Id){

@@ -12,7 +12,7 @@ public class Video {
     private String name;
     private String url;
     private String description;
-    private Date datePublication;
+    private String datePublication;
     @ManyToOne
     private Creator creator;
 }

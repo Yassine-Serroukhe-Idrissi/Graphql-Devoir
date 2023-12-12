@@ -11,27 +11,35 @@ type Creator {
     name : String,
     email : String
 }
+
+type CreatorDTO{
+    name : String,
+    email : String
+}
+
+
 input VideoDTO{
     name : String,
     url : String,
     description : String,
-    creator : CreatorDTO
+    datePublication: String,
+    creator : CreatorRequest
 }
 
-input CreatorDTO{
+input CreatorRequest{
     name : String,
     email : String,
 }
 type Query {
     videoList : [Video]
-    creatorsList : [Creator]
-    creatorById(Id :Float) : Creator
+    creatorList : [CreatorDTO]
+    creatorById(Id :Float) : CreatorDTO
     videoById(Id :Float) : Video
 
 }
 
 type Mutation{
     addVideo(videoDTO: VideoDTO): Video
-    addCreator(creatorDTO : CreatorDTO): Creator
+    addCreator(creatorDTO : CreatorRequest): Creator
 }
 

@@ -28,7 +28,7 @@ public class InventoryServiceApplication {
 		return args -> {
 			Creator c1 = creatorRepository.save(Creator.builder().name("yassine").email("yassine.serroukhe@gmail.com").build());
 			creatorRepository.save(Creator.builder().name("Asaad").email("asaad.jnini@gmail.com").build());
-			videoRepository.save(Video.builder().name("First Video").url("0.0.0.1:8086").description("video number One").datePublication(new Date()).creator(c1).build());
+			videoRepository.save(Video.builder().name("First Video").url("0.0.0.1:8086").description("video number One").datePublication("04/12/2000").creator(c1).build());
 		};
 	}
 

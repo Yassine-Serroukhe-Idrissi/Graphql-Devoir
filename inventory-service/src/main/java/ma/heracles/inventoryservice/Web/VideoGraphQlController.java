@@ -30,8 +30,13 @@ public class VideoGraphQlController {
     }
 
     @MutationMapping
-    public Creator addCreator(@Argument CreatorDTO creatorDTO){
+    public CreatorDTO addCreator(@Argument CreatorDTO creatorDTO){
         return creatorService.addCreator(creatorDTO);
+    }
+
+    @QueryMapping
+    public List<CreatorDTO> creatorList(){
+        return creatorService.creatorList();
     }
 
     @QueryMapping
@@ -45,8 +50,8 @@ public class VideoGraphQlController {
     }
 
     @MutationMapping
-    public Video addVideo(@Argument VideoDTO videoDTO) {
-        return videoService.addVideo(videoDTO);
+    public Video addVideo(@Argument Video video) {
+        return videoService.addVideo(video);
     }
 
 

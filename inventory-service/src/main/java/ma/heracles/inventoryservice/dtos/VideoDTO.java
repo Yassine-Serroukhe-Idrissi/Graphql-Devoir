@@ -8,5 +8,6 @@ public class VideoDTO {
     private String name;
     private String url;
     private String description;
+    private String datePublication;
     private CreatorDTO creatorDTO;
 }
