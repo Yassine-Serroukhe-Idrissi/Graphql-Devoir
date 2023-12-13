@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class CreatorServiceImp implements CreatorService{
@@ -30,5 +31,11 @@ public class CreatorServiceImp implements CreatorService{
             return null;
         }
 
+    }
+    @Override
+    public List<CreatorDTO> getCreatorList() {
+        List<Creator> creators = creatorRepository.findAll();
+        List<CreatorDTO> creatorDTOS = creators.stream().map(creatorMapper::fromCreatorToCreatoDTO).toList();
+        return creatorDTOS;
     }
 }

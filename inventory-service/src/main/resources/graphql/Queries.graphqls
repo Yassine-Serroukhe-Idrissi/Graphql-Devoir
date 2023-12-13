@@ -1,3 +1,4 @@
 type Query{
-    getCreatorById(id: Float) : CreatorDTO
+    getCreatorById(id: Float) : CreatorDTO,
+    getCreatorList : [CreatorDTO],
 }
