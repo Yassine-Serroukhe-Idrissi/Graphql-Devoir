@@ -1,13 +1,11 @@
-package ma.heracles.inventoryservice.Web;
+package ma.heracles.inventoryservice.web;
 
-import lombok.AllArgsConstructor;
 import ma.heracles.inventoryservice.dtos.CreatorDTO;
 import ma.heracles.inventoryservice.services.CreatorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
 @Controller

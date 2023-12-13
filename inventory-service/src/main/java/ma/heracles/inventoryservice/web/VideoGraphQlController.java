@@ -1,8 +1,6 @@
-package ma.heracles.inventoryservice.Web;
+package ma.heracles.inventoryservice.web;
 
 import org.springframework.stereotype.Controller;
-
-import java.util.List;
 
 @Controller
 public class VideoGraphQlController {
