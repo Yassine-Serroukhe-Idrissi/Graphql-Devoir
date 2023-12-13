@@ -1,0 +1,4 @@
+input CreatorDTOInput{
+    name : String
+    email: String
+}

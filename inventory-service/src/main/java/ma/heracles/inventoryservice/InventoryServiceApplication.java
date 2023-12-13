@@ -2,7 +2,6 @@ package ma.heracles.inventoryservice;
 
 import ma.heracles.inventoryservice.dao.entities.Creator;
 import ma.heracles.inventoryservice.dao.entities.Video;
-import ma.heracles.inventoryservice.mappers.ModelMapperConfig;
 import ma.heracles.inventoryservice.dao.repository.CreatorRepository;
 import ma.heracles.inventoryservice.dao.repository.VideoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +14,6 @@ import java.util.Date;
 
 @SpringBootApplication
 public class InventoryServiceApplication {
-
-	@Autowired
-	private ModelMapperConfig Mapper;
 
 	public static void main(String[] args) {
 		SpringApplication.run(InventoryServiceApplication.class, args);

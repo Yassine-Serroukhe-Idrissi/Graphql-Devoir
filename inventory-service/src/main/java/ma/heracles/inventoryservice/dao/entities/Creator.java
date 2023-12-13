@@ -2,11 +2,9 @@ package ma.heracles.inventoryservice.dao.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.util.List;
 
-
-@Entity @Data @Builder
+@Entity @Getter @Setter @Builder
 @NoArgsConstructor @AllArgsConstructor @ToString
 public class Creator {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

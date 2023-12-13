@@ -1,10 +1,9 @@
 package ma.heracles.inventoryservice.dao.entities;
 
-import java.util.Date;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity @Data @Builder
+@Entity @Getter @Setter @Builder
 @NoArgsConstructor @AllArgsConstructor @ToString
 public class Video {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

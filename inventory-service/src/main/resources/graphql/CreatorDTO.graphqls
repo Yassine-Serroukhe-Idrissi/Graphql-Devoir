@@ -1,0 +1,4 @@
+type CreatorDTO{
+    name : String
+    email: String
+}
